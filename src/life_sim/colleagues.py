@@ -11,3 +11,6 @@ class Colleague:
         self.energy -= 5
         self.social -= 5
         print(f"--Needs of {self.name} have decreased--")
+
+    def __repr__(self):
+        return f"Colleague({self.name}, {self.energy}, {self.social})"
