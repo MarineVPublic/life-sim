@@ -1,14 +1,12 @@
-from src.life_sim.colleagues import Colleague
-
-def hello() -> str:
-    return "Hello from life-sim!"
-
+from life_sim.colleagues import *
 
 def main():
     alice = Colleague("Alice", 80, 30)
-    print(alice.name)
-    print(alice.energy)
-    print(alice.social_need)
+
+    alice.display()
+    alice.decrease_needs()
+    alice.display()
+
 
 if __name__ == '__main__':
     main()
