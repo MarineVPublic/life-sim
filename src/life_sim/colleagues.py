@@ -12,5 +12,16 @@ class Colleague:
         self.social -= 5
         print(f"--Needs of {self.name} have decreased--")
 
+    def toDiscuss(self, other):
+        self.energy -= 2
+        self.social += 5
+        other.energy -= 2
+        other.social += 5
+        print(f"--{self.name} discuss with {other.name}--")
+
+    def toRest(self):
+        self.energy += 15
+        print(f"--{self.name} rests--")
+
     def __repr__(self):
         return f"Colleague({self.name}, {self.energy}, {self.social})"

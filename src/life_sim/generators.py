@@ -13,17 +13,15 @@ def names_generator():
 
 name_generator_instance = names_generator()
 
-def colleagues_generator():
+def create_colleague(name:str):
     """
-    Create a colleague with a name, an energy level and a social level.
+    Create a colleague with a name choosed in a list, a random energy level and a random social level.
     Name is generated from names_generator.
     :return:
     """
-    while True:
-        colleague = Colleague(next(name_generator_instance), 100, 100)
-        yield colleague
-
-colleague_generator_instance = colleagues_generator()
-
-colleagues = [next(colleague_generator_instance) for _ in range(3)]
-print(colleagues)
+    return Colleague(
+            name,
+            #next(name_generator_instance),
+            random.randint(0, 100),
+            random.randint(0, 100)
+    )
